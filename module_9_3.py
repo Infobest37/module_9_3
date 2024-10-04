@@ -6,7 +6,7 @@ rn = range(len(first) == len(second))
 print(list(zp))
 print(list(rn))
 first_result = (len(x) - len(y) for x, y in zip(first, second) if len(x) - len(y) != 0)
-secnd_result = ((range(len(x)) == range(len(y))) for x in first for y in second)
+secnd_result = (len(first[x]) == len(second[x]) for x in range(len(second)))
 
 print(list(first_result))
 print(list(secnd_result))
